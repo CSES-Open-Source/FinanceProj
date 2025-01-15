@@ -1,4 +1,5 @@
 import React from "react";
+import Home from "./Home"; // Import the Home component
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import Login from "./Login"; // Import the Home component
@@ -13,8 +14,13 @@ export default function TabLayout() {
     >
       {/* Home Tab */}
       <Tab.Screen
-        name="Login"
-        component={Login}
+        name="home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
+          ),
+        }}
       />
     </Tab.Navigator>
   );
