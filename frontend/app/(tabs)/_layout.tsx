@@ -22,6 +22,11 @@ export default function TabLayout() {
           ),
         }}
       />
+
+<Tab.Screen
+        name="login"
+        component={Login}
+      />
     </Tab.Navigator>
   );
 }

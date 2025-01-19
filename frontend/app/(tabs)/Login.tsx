@@ -5,9 +5,10 @@ const LoginPage: React.FC = () => {
     <div style={styles.container}>
       <div style={styles.header}>
         <div style={styles.logo}>LOGO</div>
-        <h1 style={styles.title}>Finance App</h1>
+        <h1 style={styles.title}>Triton Spend</h1>
       </div>
       <div style={styles.loginBox}>
+      
         <label style={styles.label}>
           Username: <input type="text" style={styles.input} />
         </label>
@@ -19,6 +20,7 @@ const LoginPage: React.FC = () => {
           <span style={styles.divider}>|</span>
           <a href="#" style={styles.link}>Forgot password</a>
         </div>
+        <div style={styles.ssoBox}>Sign in with SSO</div>
       </div>
     </div>
   );
@@ -61,20 +63,34 @@ const styles = {
   },
   loginBox: {
     backgroundColor: "#90c8c3",
-    padding: "30px",
+    padding: "20px",
     borderRadius: "10px",
     display: "flex",
     flexDirection: "column" as const,
     alignItems: "flex-start" as const,
     justifycontent: "center" as const,
-    width: "800px",
-    height: "170px",
+    width: "300px",
+    height: "300px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  },
+  ssoBox: {
+    width: "100%",
+    textAlign: "center" as const,
+    padding: "10px 0",
+    marginTop: "30px",
+    marginBottom: "10px",
+    border: "1px solid #000",
+    borderRadius: "5px",
+    backgroundColor: "#ffffff",
+    fontSize: "16px",
+    fontWeight: "bold" as const,
+    color: "#000000",
+    cursor: "pointer",
   },
   label: {
     display: "flex",
     flexDirection: "row" as const,
-    marginBottom: "20px",
+    marginBottom: "45px",
     fontSize: "20px",
     color: "#000000",
     width: "100%",
@@ -94,7 +110,7 @@ const styles = {
     marginTop: "50px",
   },
   link: {
-    fontSize: "14px",
+    fontSize: "16px",
     color: "#000000",
     textDecoration: "none",
   },
